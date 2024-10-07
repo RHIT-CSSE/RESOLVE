@@ -1,5 +1,18 @@
+/*
+ * ParameterModeTest.java
+ * ---------------------------------
+ * Copyright (c) 2024
+ * RESOLVE Software Research Group
+ * School of Computing
+ * Clemson University
+ * All rights reserved.
+ * ---------------------------------
+ * This file is subject to the terms and conditions defined in
+ * file 'LICENSE.txt', which is part of this source code package.
+ */
 package edu.clemson.rsrg.parsing.sanitychecking;
 
+import edu.clemson.rsrg.absyn.clauses.AssertionClause;
 import edu.clemson.rsrg.init.CompileEnvironment;
 import edu.clemson.rsrg.init.ResolveCompiler;
 import edu.clemson.rsrg.init.file.ModuleType;
@@ -11,6 +24,7 @@ import edu.clemson.rsrg.statushandling.SystemStdHandler;
 import edu.clemson.rsrg.statushandling.exception.MiscErrorException;
 import edu.clemson.rsrg.typeandpopulate.typereasoning.TypeGraph;
 import org.antlr.v4.runtime.UnbufferedCharStream;
+import org.junit.Test;
 
 import java.io.IOException;
 import java.io.StringReader;
@@ -53,4 +67,9 @@ public class ParameterModeTest {
             throw new MiscErrorException("Error creating a fake location", e);
         }
     }
+
+    // @Test
+    // public void checkParameterMode_checkEnsuresClause_throwsNoWarnings() {
+    // AssertionClause assertionClause1 = new AssertionClause(FAKE_LOCATION_1);
+    // }
 }
